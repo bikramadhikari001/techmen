@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Techmen.ai</title>
+  <meta name="description" content="Ready to transform your business? Let&#39;s talk.">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+  
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-brand">Techmen<span>.ai</span></a>
+
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/about/" class="nav-link">About</a>
+          <a href="/services/" class="nav-link">Services</a>
+          <a href="/case-studies/" class="nav-link">Case Studies</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+          <a href="/contact/" class="btn btn-primary nav-cta">Get in Touch</a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-mobile').classList.toggle('active')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="nav-mobile">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/services/">Services</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact/">Contact</a>
+  </div>
+
+  
+  <main>
+    
+
+<section class="about-hero" style="padding-top: 120px;">
+  <div class="container">
+    <span class="section-label">Get in Touch</span>
+    <h1>Let's Talk</h1>
+    <p>Have a project in mind? Questions about our services? We'd love to hear from you.</p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p style="margin-bottom: var(--space-8);">Reach out through any of these channels and we'll get back to you within 24 hours.</p>
+        
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">hello@techmen.ai</div>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Remote-first, Global</div>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">⏰</div>
+          <div>
+            <div class="contact-label">Response Time</div>
+            <div class="contact-value">Within 24 hours</div>
+          </div>
+        </div>
+        
+        <div style="margin-top: var(--space-12); padding: var(--space-8); background: var(--gray-50); border-radius: var(--radius-xl);">
+          <h4 style="margin-bottom: var(--space-4);">Prefer a quick chat?</h4>
+          <p style="font-size: var(--text-sm); margin-bottom: var(--space-4);">Book a free 30-minute consultation to discuss your project.</p>
+          <a href="#" class="btn btn-secondary">Schedule a Call</a>
+        </div>
+      </div>
+      
+      
+      <div class="card" style="padding: var(--space-10);">
+        <h3 style="margin-bottom: var(--space-6);">Send us a message</h3>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="grid grid-2" style="gap: var(--space-6);">
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="company">Company (Optional)</label>
+            <input type="text" id="company" name="company" class="form-input" placeholder="Your Company">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="How can we help?" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background: var(--gray-50);">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+    
+    <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-2);">How long does a typical project take?</h4>
+        <p>Most projects range from 4-12 weeks depending on complexity. We'll give you a clear timeline during our initial consultation.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-2);">Do you work with startups?</h4>
+        <p>Absolutely! We love working with startups and have flexible pricing options to match different budgets and stages.</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom: var(--space-2);">What if AI isn't right for my problem?</h4>
+        <p>We'll tell you honestly. We'd rather recommend a simpler solution than sell you something you don't need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Techmen<span>.ai</span></div>
+          <p class="footer-description">Cutting-edge AI solutions that actually work. We transform businesses with practical, results-driven technology.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Company</h4>
+          <div class="footer-links">
+            <a href="/about/">About Us</a>
+            <a href="/services/">Services</a>
+            <a href="/case-studies/">Case Studies</a>
+            <a href="/blog/">Blog</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Services</h4>
+          <div class="footer-links">
+            <a href="/services/">AI Consulting</a>
+            <a href="/services/">Chatbot Development</a>
+            <a href="/services/">Digital Transformation</a>
+            <a href="/services/">Cloud Services</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-links">
+            <a href="mailto:hello@techmen.ai">hello@techmen.ai</a>
+            <a href="/contact/">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Techmen.ai. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="GitHub">⌘</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

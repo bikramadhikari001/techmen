@@ -1,0 +1,68 @@
+{{ define "main" }}
+<article class="article" style="padding-top: 120px;">
+  <header class="article-header">
+    {{ if .Date }}<div class="article-meta">{{ .Date.Format "January 2, 2006" }}</div>{{ end }}
+    <h1 class="article-title">{{ .Title }}</h1>
+    {{ with .Params.description }}<p style="font-size: var(--text-xl); color: var(--text-secondary);">{{ . }}</p>{{ end }}
+
+    {{ if eq .Section "case-studies" }}
+    {{ with .Params.client }}
+    <div style="margin-top: var(--space-4);">
+      <span style="background: var(--purple); color: white; padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-size: var(--text-sm);">Client: {{ . }}</span>
+    </div>
+    {{ end }}
+    {{ end }}
+  </header>
+
+  {{ if eq .Section "case-studies" }}
+  {{ with .Params.results }}
+  <div style="background: var(--gray-50); padding: var(--space-8); border-radius: var(--radius-xl); margin-bottom: var(--space-12);">
+    <h3 style="margin-bottom: var(--space-4); font-size: var(--text-lg);">Key Results</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
+      {{ range . }}
+      <div style="display: flex; align-items: center; gap: var(--space-2);">
+        <span style="color: var(--orange); font-weight: 600;">✓</span>
+        <span>{{ . }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+  {{ end }}
+
+  {{ if eq .Section "services" }}
+  {{ with .Params.features }}
+  <div style="background: var(--gray-50); padding: var(--space-8); border-radius: var(--radius-xl); margin-bottom: var(--space-12);">
+    <h3 style="margin-bottom: var(--space-4); font-size: var(--text-lg);">What's Included</h3>
+    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-3);">
+      {{ range . }}
+      <li style="display: flex; align-items: center; gap: var(--space-2);">
+        <span style="color: var(--orange); font-weight: 600;">✓</span>
+        <span>{{ . }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+  {{ end }}
+
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+
+  <!-- Back Link -->
+  <div style="margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--gray-200);">
+    <a href="/{{ .Section }}/" style="color: var(--orange); font-weight: 500;">← Back to {{ .Section | title }}</a>
+  </div>
+</article>
+
+<!-- CTA -->
+<section class="section cta">
+  <div class="container">
+    <h2>Interested in Working Together?</h2>
+    <p>Let's discuss how we can help your business achieve similar results.</p>
+    <a href="/contact/" class="btn btn-primary btn-lg">Get in Touch</a>
+  </div>
+</section>
+{{ end }}
+

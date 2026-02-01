@@ -1,0 +1,189 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-tagline">🚀 AI That Actually Works</span>
+      <h1>Transform Your Business With <span>AI</span></h1>
+      <p class="hero-description">
+        We build cutting-edge AI solutions that actually work. No buzzwords, no bullshit—just results that matter for your business.
+      </p>
+      <div class="hero-buttons">
+        <a href="/contact/" class="btn btn-primary btn-lg">Start Your Project</a>
+        <a href="/case-studies/" class="btn btn-secondary btn-lg">View Our Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Do</span>
+      <h2>Services Built for Results</h2>
+      <p>We focus on practical AI solutions that solve real problems. Every service is designed to deliver measurable impact.</p>
+    </div>
+
+    <div class="grid grid-3">
+      {{ range first 6 (where .Site.RegularPages "Section" "services") }}
+      <div class="card service-card">
+        <div class="service-icon">{{ with .Params.icon }}{{ . }}{{ else }}🤖{{ end }}</div>
+        <h3>{{ .Title }}</h3>
+        <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
+      </div>
+      {{ else }}
+      <div class="card service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AI Consulting</h3>
+        <p>Strategic AI implementation tailored to your business needs and goals.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon">💬</div>
+        <h3>Chatbot Development</h3>
+        <p>Custom AI-powered chatbots that enhance customer engagement.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Digital Transformation</h3>
+        <p>Modernize your operations with innovative digital solutions.</p>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/services/" class="btn btn-secondary btn-lg">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div>
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      <div>
+        <div class="stat-number">3x</div>
+        <div class="stat-label">Average ROI</div>
+      </div>
+      <div>
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Support Available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case Studies Preview -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Work</span>
+      <h2>Case Studies</h2>
+      <p>Real results from real projects. See how we've helped businesses transform with AI.</p>
+    </div>
+
+    <div class="grid grid-2">
+      {{ range first 2 (where .Site.RegularPages "Section" "case-studies") }}
+      <div class="card case-card">
+        <div class="case-card-image">
+          {{ with .Params.client }}<span class="case-card-client">{{ . }}</span>{{ end }}
+        </div>
+        <div class="case-card-content">
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
+          {{ with .Params.results }}
+          <div class="case-card-results">
+            {{ range first 3 . }}
+            <span class="case-result">✓ {{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ else }}
+      <div class="card case-card">
+        <div class="case-card-image">
+          <span class="case-card-client">Acme Corp</span>
+        </div>
+        <div class="case-card-content">
+          <h3><a href="/case-studies/">AI-Powered Document Processing</a></h3>
+          <p>Automated document processing system that reduced manual work by 50%.</p>
+          <div class="case-card-results">
+            <span class="case-result">✓ 50% time saved</span>
+            <span class="case-result">✓ 99.9% accuracy</span>
+          </div>
+        </div>
+      </div>
+      <div class="card case-card">
+        <div class="case-card-image">
+          <span class="case-card-client">TechStart Inc</span>
+        </div>
+        <div class="case-card-content">
+          <h3><a href="/case-studies/">Customer Service Chatbot</a></h3>
+          <p>24/7 AI chatbot handling 80% of customer inquiries automatically.</p>
+          <div class="case-card-results">
+            <span class="case-result">✓ 80% automation</span>
+            <span class="case-result">✓ 3x faster response</span>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/case-studies/" class="btn btn-secondary btn-lg">View All Case Studies</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" style="background: var(--gray-50);">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Testimonials</span>
+      <h2>What Our Clients Say</h2>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card testimonial-card">
+        <p class="testimonial-text">"Techmen.ai delivered exactly what they promised—no fluff, just results. Our AI implementation was smooth and the ROI exceeded expectations."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">JD</div>
+          <div>
+            <div class="testimonial-name">John Doe</div>
+            <div class="testimonial-role">CTO, TechStart Inc</div>
+          </div>
+        </div>
+      </div>
+      <div class="card testimonial-card">
+        <p class="testimonial-text">"Finally, a tech company that speaks plain English. They understood our needs and built a solution that actually works for our team."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SA</div>
+          <div>
+            <div class="testimonial-name">Sarah Anderson</div>
+            <div class="testimonial-role">CEO, Acme Corp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta">
+  <div class="container">
+    <h2>Ready to Transform Your Business?</h2>
+    <p>Let's talk about how AI can solve your real problems.</p>
+    <a href="/contact/" class="btn btn-primary btn-lg">Get Started Today</a>
+  </div>
+</section>
+{{ end }}
+

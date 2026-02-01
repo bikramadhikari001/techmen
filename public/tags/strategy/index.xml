@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Strategy on Techmen.ai</title>
+    <link>/tags/strategy/</link>
+    <description>Recent content in Strategy on Techmen.ai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/strategy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Most AI Projects Fail (And How to Avoid It)</title>
+      <link>/blog/hello-world/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/blog/hello-world/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s be honest: most AI projects fail. Studies consistently show that 70-80% of AI initiatives never make it to production. After working on dozens of AI projects, we&amp;rsquo;ve seen the patterns that separate success from failure.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-three-killers-of-ai-projects&#34;&gt;The Three Killers of AI Projects&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-starting-with-technology-not-problems&#34;&gt;1. Starting With Technology, Not Problems&lt;/h3&gt;&#xA;&lt;p&gt;The most common mistake? Companies decide they &amp;ldquo;need AI&amp;rdquo; before identifying what problem they&amp;rsquo;re solving. They buy expensive tools, hire data scientists, and then go looking for use cases.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

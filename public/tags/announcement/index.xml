@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Announcement on Techmen.ai</title>
+    <link>/tags/announcement/</link>
+    <description>Recent content in Announcement on Techmen.ai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/announcement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World - Our First Post</title>
+      <link>/blog/hello-world/</link>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>/blog/hello-world/</guid>
+      <description>&lt;p&gt;Welcome to &lt;strong&gt;Techmen.ai&lt;/strong&gt;!&lt;/p&gt;&#xA;&lt;p&gt;This is our first blog post, created to demonstrate how easy it is to manage content with PageCMS.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-this-works&#34;&gt;How This Works&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Write content in Markdown&lt;/li&gt;&#xA;&lt;li&gt;Edit via PageCMS interface&lt;/li&gt;&#xA;&lt;li&gt;Push to GitHub&lt;/li&gt;&#xA;&lt;li&gt;Cloudflare Pages auto-deploys&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Simple as fuck. 🚀&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

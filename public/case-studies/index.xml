@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Case Studies on Techmen.ai</title>
+    <link>/case-studies/</link>
+    <description>Recent content in Case Studies on Techmen.ai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/case-studies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>24/7 Customer Service Chatbot</title>
+      <link>/case-studies/customer-service-bot/</link>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/case-studies/customer-service-bot/</guid>
+      <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;TechStart Inc, a fast-growing SaaS company, was struggling to scale their customer support. With customers across multiple time zones, they needed 24/7 coverage but couldn&amp;rsquo;t afford to triple their support team.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-problem-with-generic-chatbots&#34;&gt;The Problem With Generic Chatbots&lt;/h2&gt;&#xA;&lt;p&gt;They had tried off-the-shelf chatbot solutions, but customers hated them. The bots couldn&amp;rsquo;t understand product-specific questions and often gave irrelevant answers, leading to frustrated customers and more work for the human team.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI-Powered Document Processing</title>
+      <link>/case-studies/sample-project/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/case-studies/sample-project/</guid>
+      <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;Acme Corp, a mid-sized logistics company, was drowning in paperwork. Their team of 15 data entry specialists spent 8 hours a day manually processing invoices, bills of lading, and customs documents. Errors were common, and the backlog kept growing.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-they-tried-before&#34;&gt;What They Tried Before&lt;/h2&gt;&#xA;&lt;p&gt;They had attempted to use traditional OCR software, but the accuracy was poor—especially with handwritten notes and varied document formats. The team spent almost as much time correcting OCR errors as they did doing manual entry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Real-Time Analytics Pipeline</title>
+      <link>/case-studies/data-pipeline/</link>
+      <pubDate>Wed, 10 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>/case-studies/data-pipeline/</guid>
+      <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;RetailMax, a retail chain with 200+ locations, had data everywhere—POS systems, inventory management, e-commerce platform, marketing tools—but no way to see the full picture. Monthly reports took weeks to compile, and by the time decisions were made, the data was stale.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-mess-we-inherited&#34;&gt;The Mess We Inherited&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;12 different data sources with no integration&lt;/li&gt;&#xA;&lt;li&gt;Reports created manually in Excel&lt;/li&gt;&#xA;&lt;li&gt;No one trusted the numbers because they never matched&lt;/li&gt;&#xA;&lt;li&gt;IT backlog of 6+ months for any new report requests&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;our-approach&#34;&gt;Our Approach&lt;/h2&gt;&#xA;&lt;p&gt;We designed and built a modern data platform from the ground up:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

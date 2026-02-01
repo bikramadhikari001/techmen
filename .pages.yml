@@ -1,0 +1,111 @@
+# PageCMS Configuration for Techmen.ai
+# Manage your content easily at app.pagescms.org
+
+media:
+  input: static/images
+  output: /images
+
+content:
+  # Blog Posts
+  - name: blog
+    label: Blog Posts
+    type: collection
+    path: content/blog
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: description
+        label: Description (for SEO and previews)
+        type: text
+        required: true
+      - name: image
+        label: Featured Image
+        type: image
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: body
+        label: Content
+        type: rich-text
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+
+  # Case Studies
+  - name: case-studies
+    label: Case Studies
+    type: collection
+    path: content/case-studies
+    fields:
+      - name: title
+        label: Project Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: client
+        label: Client Name
+        type: string
+        required: true
+      - name: description
+        label: Short Description
+        type: text
+        required: true
+      - name: image
+        label: Featured Image
+        type: image
+      - name: results
+        label: Key Results (one per line)
+        type: string
+        list: true
+      - name: body
+        label: Full Case Study
+        type: rich-text
+    view:
+      fields: [title, client, date]
+      primary: title
+      default:
+        sort: date
+        order: desc
+
+  # Services
+  - name: services
+    label: Services
+    type: collection
+    path: content/services
+    fields:
+      - name: title
+        label: Service Name
+        type: string
+        required: true
+      - name: description
+        label: Short Description
+        type: text
+        required: true
+      - name: icon
+        label: Icon (emoji like 🤖 or ⚡)
+        type: string
+      - name: features
+        label: Key Features (one per line)
+        type: string
+        list: true
+      - name: body
+        label: Full Description
+        type: rich-text
+    view:
+      fields: [title, icon, description]
+      primary: title
+

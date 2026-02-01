@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Techmen.ai</title>
+    <link>/services/</link>
+    <description>Recent content in Services on Techmen.ai</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Consulting</title>
+      <link>/services/ai-consulting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/services/ai-consulting/</guid>
+      <description>&lt;h2 id=&#34;what-we-do&#34;&gt;What We Do&lt;/h2&gt;&#xA;&lt;p&gt;We help businesses cut through the AI hype and identify opportunities where artificial intelligence can genuinely improve operations, reduce costs, or create new value.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-approach&#34;&gt;Our Approach&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Discovery&lt;/strong&gt; - We start by understanding your business, challenges, and goals&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Assessment&lt;/strong&gt; - We evaluate your data, systems, and team capabilities&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Strategy&lt;/strong&gt; - We develop a practical roadmap with clear milestones&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Implementation&lt;/strong&gt; - We guide you through execution, not just planning&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;who-this-is-for&#34;&gt;Who This Is For&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Companies exploring AI but unsure where to start&lt;/li&gt;&#xA;&lt;li&gt;Teams that have tried AI projects that didn&amp;rsquo;t deliver&lt;/li&gt;&#xA;&lt;li&gt;Leaders who want honest advice, not sales pitches&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-you-get&#34;&gt;What You Get&lt;/h2&gt;&#xA;&lt;p&gt;A clear, actionable plan that your team can actually execute—with or without our continued involvement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chatbot Development</title>
+      <link>/services/chatbot-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/services/chatbot-development/</guid>
+      <description>&lt;h2 id=&#34;chatbots-that-dont-suck&#34;&gt;Chatbots That Don&amp;rsquo;t Suck&lt;/h2&gt;&#xA;&lt;p&gt;We build conversational AI that understands context, handles complex queries, and knows when to bring in a human.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-chatbot-solutions&#34;&gt;Our Chatbot Solutions&lt;/h2&gt;&#xA;&lt;h3 id=&#34;customer-support-bots&#34;&gt;Customer Support Bots&lt;/h3&gt;&#xA;&lt;p&gt;Handle common inquiries, troubleshoot issues, and escalate when needed. Reduce support costs while improving response times.&lt;/p&gt;&#xA;&lt;h3 id=&#34;sales--lead-qualification&#34;&gt;Sales &amp;amp; Lead Qualification&lt;/h3&gt;&#xA;&lt;p&gt;Engage visitors, qualify leads, and book meetings—all while you sleep.&lt;/p&gt;&#xA;&lt;h3 id=&#34;internal-knowledge-bots&#34;&gt;Internal Knowledge Bots&lt;/h3&gt;&#xA;&lt;p&gt;Help your team find information instantly. Connect to your docs, wikis, and databases.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cloud Services</title>
+      <link>/services/cloud-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/services/cloud-services/</guid>
+      <description>&lt;h2 id=&#34;cloud-without-the-complexity&#34;&gt;Cloud Without the Complexity&lt;/h2&gt;&#xA;&lt;p&gt;We help businesses leverage cloud infrastructure without getting lost in the complexity. Whether you&amp;rsquo;re migrating or optimizing, we&amp;rsquo;ve got you covered.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-cloud-services&#34;&gt;Our Cloud Services&lt;/h2&gt;&#xA;&lt;h3 id=&#34;cloud-migration&#34;&gt;Cloud Migration&lt;/h3&gt;&#xA;&lt;p&gt;Move your workloads to the cloud safely and efficiently. We handle the planning, execution, and validation.&lt;/p&gt;&#xA;&lt;h3 id=&#34;architecture-design&#34;&gt;Architecture Design&lt;/h3&gt;&#xA;&lt;p&gt;Build cloud-native applications that scale automatically and cost-effectively.&lt;/p&gt;&#xA;&lt;h3 id=&#34;cost-optimization&#34;&gt;Cost Optimization&lt;/h3&gt;&#xA;&lt;p&gt;Already in the cloud but spending too much? We&amp;rsquo;ll audit your infrastructure and find savings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Digital Transformation</title>
+      <link>/services/digital-transformation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/services/digital-transformation/</guid>
+      <description>&lt;h2 id=&#34;transform-without-the-drama&#34;&gt;Transform Without the Drama&lt;/h2&gt;&#xA;&lt;p&gt;Digital transformation doesn&amp;rsquo;t have to mean 18-month projects and blown budgets. We take an incremental approach that delivers value fast.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-transform&#34;&gt;What We Transform&lt;/h2&gt;&#xA;&lt;h3 id=&#34;manual-processes&#34;&gt;Manual Processes&lt;/h3&gt;&#xA;&lt;p&gt;Identify repetitive tasks and automate them. Free your team to do work that actually matters.&lt;/p&gt;&#xA;&lt;h3 id=&#34;disconnected-systems&#34;&gt;Disconnected Systems&lt;/h3&gt;&#xA;&lt;p&gt;Connect your tools so data flows automatically. No more copy-pasting between spreadsheets.&lt;/p&gt;&#xA;&lt;h3 id=&#34;outdated-infrastructure&#34;&gt;Outdated Infrastructure&lt;/h3&gt;&#xA;&lt;p&gt;Move to modern, scalable systems without disrupting your business.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-philosophy&#34;&gt;Our Philosophy&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Start small, prove value, then scale.&lt;/strong&gt; We don&amp;rsquo;t believe in big-bang transformations. Every project starts with a focused pilot that demonstrates ROI before expanding.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
