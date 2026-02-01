@@ -321,8 +321,24 @@ p {
   color: var(--purple);
 }
 
-.nav-brand span {
+.nav-brand .typing-text {
   color: var(--orange);
+  position: relative;
+}
+
+.nav-brand .cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--orange);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursorBlink 0.7s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .nav-links {
