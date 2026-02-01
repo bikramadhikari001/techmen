@@ -188,13 +188,13 @@
 
 <section class="section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <span class="section-label">What We Do</span>
       <h2>Services Built for Results</h2>
       <p>We focus on practical AI solutions that solve real problems. Every service is designed to deliver measurable impact.</p>
     </div>
 
-    <div class="grid grid-4">
+    <div class="grid grid-4" data-reveal-stagger>
       
       <a href="/services/ai-consulting/" class="card service-card">
         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -253,21 +253,21 @@
 
 <section class="section stats">
   <div class="container">
-    <div class="stats-grid">
+    <div class="stats-grid" data-reveal-stagger>
       <div>
-        <div class="stat-number">50+</div>
+        <div class="stat-number" data-count-to="50" data-suffix="+">0</div>
         <div class="stat-label">Projects Delivered</div>
       </div>
       <div>
-        <div class="stat-number">98%</div>
+        <div class="stat-number" data-count-to="98" data-suffix="%">0</div>
         <div class="stat-label">Client Satisfaction</div>
       </div>
       <div>
-        <div class="stat-number">3x</div>
+        <div class="stat-number" data-count-to="3" data-suffix="x">0</div>
         <div class="stat-label">Average ROI</div>
       </div>
       <div>
-        <div class="stat-number">24/7</div>
+        <div class="stat-number" data-static="24/7">24/7</div>
         <div class="stat-label">Support Available</div>
       </div>
     </div>
@@ -277,13 +277,13 @@
 
 <section class="section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <span class="section-label">Our Work</span>
       <h2>Case Studies</h2>
       <p>Real results from real projects. See how we've helped businesses transform with AI.</p>
     </div>
 
-    <div class="grid grid-2">
+    <div class="grid grid-2" data-reveal-stagger>
       
       <a href="/case-studies/customer-service-bot/" class="card case-card">
         <div class="case-card-image" style="background-image: url('https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&amp;q=80');">
@@ -338,12 +338,12 @@
 
 <section class="section" style="background: var(--gray-50);">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <span class="section-label">Testimonials</span>
       <h2>What Our Clients Say</h2>
     </div>
 
-    <div class="grid grid-2">
+    <div class="grid grid-2" data-reveal-stagger>
       <div class="card testimonial-card">
         <p class="testimonial-text">"Techmen.ai delivered exactly what they promised—no fluff, just results. Our AI implementation was smooth and the ROI exceeded expectations."</p>
         <div class="testimonial-author">
@@ -370,7 +370,7 @@
 
 
 <section class="section cta">
-  <div class="container">
+  <div class="container" data-reveal>
     <h2>Ready to Transform Your Business?</h2>
     <p>Let's talk about how AI can solve your real problems.</p>
     <a href="/contact/" class="btn btn-primary btn-lg">Get Started Today</a>
@@ -427,6 +427,71 @@
       </div>
     </div>
   </footer>
+
+  
+  <script>
+    (function() {
+      
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -50px 0px',
+        threshold: 0.1
+      };
+
+      const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(revealCallback, observerOptions);
+
+      
+      document.querySelectorAll('[data-reveal], [data-reveal-stagger], .section-header').forEach(el => {
+        observer.observe(el);
+      });
+
+      
+      const countElements = document.querySelectorAll('[data-count-to]');
+      if (countElements.length > 0) {
+        const countObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const target = parseInt(el.dataset.countTo);
+              const suffix = el.dataset.suffix || '';
+              const duration = 2000;
+              const startTime = performance.now();
+
+              const easeOutQuart = t => 1 - Math.pow(1 - t, 4);
+
+              const animate = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = easeOutQuart(progress);
+                const current = Math.floor(easedProgress * target);
+
+                el.textContent = current + suffix;
+
+                if (progress < 1) {
+                  requestAnimationFrame(animate);
+                } else {
+                  el.textContent = target + suffix;
+                }
+              };
+
+              requestAnimationFrame(animate);
+              obs.unobserve(el);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        countElements.forEach(el => countObserver.observe(el));
+      }
+    })();
+  </script>
 </body>
 </html>
-

@@ -131,13 +131,13 @@
 <!-- Services Section -->
 <section class="section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <span class="section-label">What We Do</span>
       <h2>Services Built for Results</h2>
       <p>We focus on practical AI solutions that solve real problems. Every service is designed to deliver measurable impact.</p>
     </div>
 
-    <div class="grid grid-4">
+    <div class="grid grid-4" data-reveal-stagger>
       {{ range first 4 (where .Site.RegularPages "Section" "services") }}
       <a href="{{ .Permalink }}" class="card service-card">
         <div class="service-icon">{{ partial "icon.html" (.Params.icon | default "brain") }}</div>
@@ -172,21 +172,21 @@
 <!-- Stats Section -->
 <section class="section stats">
   <div class="container">
-    <div class="stats-grid">
+    <div class="stats-grid" data-reveal-stagger>
       <div>
-        <div class="stat-number">50+</div>
+        <div class="stat-number" data-count-to="50" data-suffix="+">0</div>
         <div class="stat-label">Projects Delivered</div>
       </div>
       <div>
-        <div class="stat-number">98%</div>
+        <div class="stat-number" data-count-to="98" data-suffix="%">0</div>
         <div class="stat-label">Client Satisfaction</div>
       </div>
       <div>
-        <div class="stat-number">3x</div>
+        <div class="stat-number" data-count-to="3" data-suffix="x">0</div>
         <div class="stat-label">Average ROI</div>
       </div>
       <div>
-        <div class="stat-number">24/7</div>
+        <div class="stat-number" data-static="24/7">24/7</div>
         <div class="stat-label">Support Available</div>
       </div>
     </div>
@@ -196,13 +196,13 @@
 <!-- Case Studies Preview -->
 <section class="section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <span class="section-label">Our Work</span>
       <h2>Case Studies</h2>
       <p>Real results from real projects. See how we've helped businesses transform with AI.</p>
     </div>
 
-    <div class="grid grid-2">
+    <div class="grid grid-2" data-reveal-stagger>
       {{ range first 2 (where .Site.RegularPages "Section" "case-studies") }}
       <a href="{{ .Permalink }}" class="card case-card">
         <div class="case-card-image" {{ with .Params.image }}style="background-image: url('{{ . }}');"{{ end }}>
@@ -259,12 +259,12 @@
 <!-- Testimonials -->
 <section class="section" style="background: var(--gray-50);">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" data-reveal>
       <span class="section-label">Testimonials</span>
       <h2>What Our Clients Say</h2>
     </div>
 
-    <div class="grid grid-2">
+    <div class="grid grid-2" data-reveal-stagger>
       <div class="card testimonial-card">
         <p class="testimonial-text">"Techmen.ai delivered exactly what they promised—no fluff, just results. Our AI implementation was smooth and the ROI exceeded expectations."</p>
         <div class="testimonial-author">
@@ -291,7 +291,7 @@
 
 <!-- CTA Section -->
 <section class="section cta">
-  <div class="container">
+  <div class="container" data-reveal>
     <h2>Ready to Transform Your Business?</h2>
     <p>Let's talk about how AI can solve your real problems.</p>
     <a href="/contact/" class="btn btn-primary btn-lg">Get Started Today</a>
