@@ -58,6 +58,7 @@
     
 
 <section class="hero">
+  <canvas id="hero-canvas"></canvas>
   <div class="container">
     <div class="hero-content">
       <span class="hero-tagline">🚀 AI That Actually Works</span>
@@ -72,6 +73,117 @@
     </div>
   </div>
 </section>
+
+<script>
+
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let nodes = [];
+  let connections = [];
+  let mouseX = 0, mouseY = 0;
+
+  
+  function resize() {
+    width = canvas.width = canvas.offsetWidth;
+    height = canvas.height = canvas.offsetHeight;
+    initNodes();
+  }
+
+  
+  function initNodes() {
+    nodes = [];
+    const nodeCount = Math.floor((width * height) / 15000);
+
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        radius: Math.random() * 2 + 1,
+        
+        symbol: Math.random() > 0.7 ? ['∑', '∫', 'π', 'θ', 'λ', '∂', '∇', 'Δ', '∞', 'α', 'β', 'γ'][Math.floor(Math.random() * 12)] : null
+      });
+    }
+  }
+
+  
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    
+    nodes.forEach((node, i) => {
+      
+      node.x += node.vx;
+      node.y += node.vy;
+
+      
+      if (node.x < 0 || node.x > width) node.vx *= -1;
+      if (node.y < 0 || node.y > height) node.vy *= -1;
+
+      
+      nodes.slice(i + 1).forEach(other => {
+        const dx = other.x - node.x;
+        const dy = other.y - node.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 150) {
+          ctx.beginPath();
+          ctx.moveTo(node.x, node.y);
+          ctx.lineTo(other.x, other.y);
+          ctx.strokeStyle = `rgba(255, 163, 69, ${0.15 * (1 - dist / 150)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      });
+
+      
+      if (node.symbol) {
+        ctx.font = '12px monospace';
+        ctx.fillStyle = 'rgba(255, 163, 69, 0.4)';
+        ctx.fillText(node.symbol, node.x - 4, node.y + 4);
+      } else {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 163, 69, 0.5)';
+        ctx.fill();
+      }
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  
+  canvas.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+
+    
+    nodes.forEach(node => {
+      const dx = node.x - mouseX;
+      const dy = node.y - mouseY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < 100) {
+        node.vx += dx * 0.001;
+        node.vy += dy * 0.001;
+        
+        node.vx = Math.max(-2, Math.min(2, node.vx));
+        node.vy = Math.max(-2, Math.min(2, node.vy));
+      }
+    });
+  });
+
+  window.addEventListener('resize', resize);
+  resize();
+  animate();
+})();
+</script>
 
 
 <section class="section">
@@ -151,12 +263,12 @@
 
     <div class="grid grid-2">
       
-      <div class="card case-card">
+      <a href="/case-studies/customer-service-bot/" class="card case-card">
         <div class="case-card-image">
           <span class="case-card-client">TechStart Inc</span>
         </div>
         <div class="case-card-content">
-          <h3><a href="/case-studies/customer-service-bot/">24/7 Customer Service Chatbot</a></h3>
+          <h3>24/7 Customer Service Chatbot</h3>
           <p>Building an AI chatbot that handles 80% of customer inquiries automatically</p>
           
           <div class="case-card-results">
@@ -170,14 +282,14 @@
           </div>
           
         </div>
-      </div>
+      </a>
       
-      <div class="card case-card">
+      <a href="/case-studies/sample-project/" class="card case-card">
         <div class="case-card-image">
           <span class="case-card-client">Acme Corp</span>
         </div>
         <div class="case-card-content">
-          <h3><a href="/case-studies/sample-project/">AI-Powered Document Processing</a></h3>
+          <h3>AI-Powered Document Processing</h3>
           <p>How we helped a logistics company process 10,000&#43; documents daily with 99.9% accuracy</p>
           
           <div class="case-card-results">
@@ -191,7 +303,7 @@
           </div>
           
         </div>
-      </div>
+      </a>
       
     </div>
 

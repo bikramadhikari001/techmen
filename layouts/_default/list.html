@@ -29,12 +29,12 @@
     <!-- Case Studies Layout -->
     <div class="grid grid-2">
       {{ range .Pages }}
-      <article class="card case-card">
+      <a href="{{ .Permalink }}" class="card case-card">
         <div class="case-card-image">
           {{ with .Params.client }}<span class="case-card-client">{{ . }}</span>{{ end }}
         </div>
         <div class="case-card-content">
-          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <h3>{{ .Title }}</h3>
           <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | truncate 150 }}{{ end }}</p>
           {{ with .Params.results }}
           <div class="case-card-results">
@@ -44,7 +44,7 @@
           </div>
           {{ end }}
         </div>
-      </article>
+      </a>
       {{ end }}
     </div>
 

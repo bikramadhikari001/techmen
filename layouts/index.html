@@ -1,6 +1,7 @@
 {{ define "main" }}
 <!-- Hero Section -->
 <section class="hero">
+  <canvas id="hero-canvas"></canvas>
   <div class="container">
     <div class="hero-content">
       <span class="hero-tagline">🚀 AI That Actually Works</span>
@@ -15,6 +16,117 @@
     </div>
   </div>
 </section>
+
+<script>
+// AI Neural Network Animation
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let nodes = [];
+  let connections = [];
+  let mouseX = 0, mouseY = 0;
+
+  // Resize canvas
+  function resize() {
+    width = canvas.width = canvas.offsetWidth;
+    height = canvas.height = canvas.offsetHeight;
+    initNodes();
+  }
+
+  // Initialize nodes
+  function initNodes() {
+    nodes = [];
+    const nodeCount = Math.floor((width * height) / 15000);
+
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        radius: Math.random() * 2 + 1,
+        // Math symbols for some nodes
+        symbol: Math.random() > 0.7 ? ['∑', '∫', 'π', 'θ', 'λ', '∂', '∇', 'Δ', '∞', 'α', 'β', 'γ'][Math.floor(Math.random() * 12)] : null
+      });
+    }
+  }
+
+  // Animation loop
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    // Update and draw nodes
+    nodes.forEach((node, i) => {
+      // Move nodes
+      node.x += node.vx;
+      node.y += node.vy;
+
+      // Bounce off edges
+      if (node.x < 0 || node.x > width) node.vx *= -1;
+      if (node.y < 0 || node.y > height) node.vy *= -1;
+
+      // Draw connections to nearby nodes
+      nodes.slice(i + 1).forEach(other => {
+        const dx = other.x - node.x;
+        const dy = other.y - node.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 150) {
+          ctx.beginPath();
+          ctx.moveTo(node.x, node.y);
+          ctx.lineTo(other.x, other.y);
+          ctx.strokeStyle = `rgba(255, 163, 69, ${0.15 * (1 - dist / 150)})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      });
+
+      // Draw node
+      if (node.symbol) {
+        ctx.font = '12px monospace';
+        ctx.fillStyle = 'rgba(255, 163, 69, 0.4)';
+        ctx.fillText(node.symbol, node.x - 4, node.y + 4);
+      } else {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 163, 69, 0.5)';
+        ctx.fill();
+      }
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  // Mouse interaction
+  canvas.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+
+    // Gently push nearby nodes
+    nodes.forEach(node => {
+      const dx = node.x - mouseX;
+      const dy = node.y - mouseY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < 100) {
+        node.vx += dx * 0.001;
+        node.vy += dy * 0.001;
+        // Limit velocity
+        node.vx = Math.max(-2, Math.min(2, node.vx));
+        node.vy = Math.max(-2, Math.min(2, node.vy));
+      }
+    });
+  });
+
+  window.addEventListener('resize', resize);
+  resize();
+  animate();
+})();
+</script>
 
 <!-- Services Section -->
 <section class="section">
@@ -92,12 +204,12 @@
 
     <div class="grid grid-2">
       {{ range first 2 (where .Site.RegularPages "Section" "case-studies") }}
-      <div class="card case-card">
+      <a href="{{ .Permalink }}" class="card case-card">
         <div class="case-card-image">
           {{ with .Params.client }}<span class="case-card-client">{{ . }}</span>{{ end }}
         </div>
         <div class="case-card-content">
-          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <h3>{{ .Title }}</h3>
           <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
           {{ with .Params.results }}
           <div class="case-card-results">
@@ -107,7 +219,7 @@
           </div>
           {{ end }}
         </div>
-      </div>
+      </a>
       {{ else }}
       <div class="card case-card">
         <div class="case-card-image">
