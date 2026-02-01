@@ -1,7 +1,7 @@
 ---
 title: "Chatbot Development"
 description: "AI-powered chatbots that actually help your customers"
-icon: "💬"
+icon: "chat"
 features:
   - "Custom AI Training"
   - "Multi-platform Support"

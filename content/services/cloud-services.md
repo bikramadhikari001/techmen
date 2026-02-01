@@ -1,7 +1,7 @@
 ---
 title: "Cloud Services"
 description: "Scalable, secure cloud infrastructure done right"
-icon: "☁️"
+icon: "cloud"
 features:
   - "AWS & GCP Expertise"
   - "Infrastructure as Code"

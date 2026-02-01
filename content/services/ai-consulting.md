@@ -1,7 +1,7 @@
 ---
 title: "AI Consulting"
 description: "Strategic AI implementation that delivers real business value"
-icon: "🤖"
+icon: "brain"
 features:
   - "AI Strategy Development"
   - "Technology Assessment"

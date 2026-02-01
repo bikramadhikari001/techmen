@@ -50,20 +50,20 @@
 
     {{ else if eq .Section "services" }}
     <!-- Services Layout -->
-    <div class="grid grid-3">
+    <div class="grid grid-4">
       {{ range .Pages }}
-      <article class="card service-card">
-        <div class="service-icon">{{ with .Params.icon }}{{ . }}{{ else }}🤖{{ end }}</div>
-        <h3><a href="{{ .Permalink }}" style="color: inherit;">{{ .Title }}</a></h3>
+      <a href="{{ .Permalink }}" class="card service-card">
+        <div class="service-icon">{{ partial "icon.html" (.Params.icon | default "brain") }}</div>
+        <h3>{{ .Title }}</h3>
         <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}</p>
         {{ with .Params.features }}
-        <ul style="margin-top: 1rem; text-align: left;">
+        <ul class="service-features">
           {{ range first 3 . }}
-          <li style="color: var(--text-muted); font-size: var(--text-sm); margin-bottom: 0.5rem;">✓ {{ . }}</li>
+          <li>{{ . }}</li>
           {{ end }}
         </ul>
         {{ end }}
-      </article>
+      </a>
       {{ end }}
     </div>
 

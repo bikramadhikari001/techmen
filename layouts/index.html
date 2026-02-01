@@ -137,26 +137,26 @@
       <p>We focus on practical AI solutions that solve real problems. Every service is designed to deliver measurable impact.</p>
     </div>
 
-    <div class="grid grid-3">
-      {{ range first 6 (where .Site.RegularPages "Section" "services") }}
-      <div class="card service-card">
-        <div class="service-icon">{{ with .Params.icon }}{{ . }}{{ else }}🤖{{ end }}</div>
+    <div class="grid grid-4">
+      {{ range first 4 (where .Site.RegularPages "Section" "services") }}
+      <a href="{{ .Permalink }}" class="card service-card">
+        <div class="service-icon">{{ partial "icon.html" (.Params.icon | default "brain") }}</div>
         <h3>{{ .Title }}</h3>
         <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
-      </div>
+      </a>
       {{ else }}
       <div class="card service-card">
-        <div class="service-icon">🤖</div>
+        <div class="service-icon">{{ partial "icon.html" "brain" }}</div>
         <h3>AI Consulting</h3>
         <p>Strategic AI implementation tailored to your business needs and goals.</p>
       </div>
       <div class="card service-card">
-        <div class="service-icon">💬</div>
+        <div class="service-icon">{{ partial "icon.html" "chat" }}</div>
         <h3>Chatbot Development</h3>
         <p>Custom AI-powered chatbots that enhance customer engagement.</p>
       </div>
       <div class="card service-card">
-        <div class="service-icon">⚡</div>
+        <div class="service-icon">{{ partial "icon.html" "transform" }}</div>
         <h3>Digital Transformation</h3>
         <p>Modernize your operations with innovative digital solutions.</p>
       </div>

@@ -1,7 +1,7 @@
 ---
 title: "Digital Transformation"
 description: "Modernize your operations without the chaos"
-icon: "⚡"
+icon: "transform"
 features:
   - "Process Automation"
   - "System Integration"
