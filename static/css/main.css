@@ -855,7 +855,18 @@ a.case-card:hover h3 {
 .case-card-image {
   height: 240px;
   background: linear-gradient(135deg, var(--purple) 0%, var(--orange) 100%);
+  background-size: cover;
+  background-position: center;
   position: relative;
+  transition: transform var(--transition-base);
+}
+
+a.case-card:hover .case-card-image {
+  transform: scale(1.05);
+}
+
+a.case-card {
+  overflow: hidden;
 }
 
 .case-card-client {

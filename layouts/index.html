@@ -205,7 +205,7 @@
     <div class="grid grid-2">
       {{ range first 2 (where .Site.RegularPages "Section" "case-studies") }}
       <a href="{{ .Permalink }}" class="card case-card">
-        <div class="case-card-image">
+        <div class="case-card-image" {{ with .Params.image }}style="background-image: url('{{ . }}');"{{ end }}>
           {{ with .Params.client }}<span class="case-card-client">{{ . }}</span>{{ end }}
         </div>
         <div class="case-card-content">

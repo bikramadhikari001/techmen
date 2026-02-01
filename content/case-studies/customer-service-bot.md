@@ -3,6 +3,7 @@ title: "24/7 Customer Service Chatbot"
 date: 2026-01-20
 client: "TechStart Inc"
 description: "Building an AI chatbot that handles 80% of customer inquiries automatically"
+image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80"
 results:
   - "80% automation rate"
   - "3x faster response time"

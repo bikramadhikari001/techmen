@@ -3,6 +3,7 @@ title: "AI-Powered Document Processing"
 date: 2026-01-15
 client: "Acme Corp"
 description: "How we helped a logistics company process 10,000+ documents daily with 99.9% accuracy"
+image: "https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=800&q=80"
 results:
   - "50% reduction in manual work"
   - "3x faster processing"

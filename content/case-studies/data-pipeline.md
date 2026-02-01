@@ -3,6 +3,7 @@ title: "Real-Time Analytics Pipeline"
 date: 2025-12-10
 client: "RetailMax"
 description: "Building a data infrastructure that turns raw data into actionable insights in minutes, not days"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
 results:
   - "Real-time dashboards"
   - "90% faster reporting"
