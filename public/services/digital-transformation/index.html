@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Transformation | Techmen.ai</title>
@@ -69,44 +69,53 @@
 <article class="article">
   <div class="container">
     
+    
 
     
     
-    <div class="features-box" data-reveal>
-      <h3>What's Included</h3>
-      <ul class="features-grid">
+    
+    <div class="summary-card summary-card-services" data-reveal>
+      <div class="summary-card-header">
+        <span class="summary-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
+  <path d="M21 3v5h-5"/>
+  <path d="M12 7v5l3 3"/>
+</svg></span>
+        <h3>What's Included</h3>
+      </div>
+      <div class="summary-features">
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Process Automation</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>System Integration</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Cloud Migration</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Data Pipeline Design</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Legacy System Modernization</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Change Management Support</span>
-        </li>
+        </div>
         
-      </ul>
+      </div>
     </div>
     
     
@@ -247,6 +256,28 @@
       document.querySelectorAll('[data-reveal], [data-reveal-stagger], .section-header').forEach(el => {
         observer.observe(el);
       });
+
+      
+      const articleContent = document.querySelector('.article-content');
+      if (articleContent) {
+        articleContent.classList.add('animated');
+
+        const contentElements = articleContent.querySelectorAll('h2, h3, p, ul, ol, blockquote');
+
+        const contentObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              contentObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        contentElements.forEach(el => contentObserver.observe(el));
+      }
 
       
       const countElements = document.querySelectorAll('[data-count-to]');

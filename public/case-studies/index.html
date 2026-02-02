@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Case Studies | Techmen.ai</title>
@@ -70,7 +70,7 @@
     
     <div class="grid grid-2" data-reveal-stagger>
       
-      <a href="//localhost:1313/case-studies/customer-service-bot/" class="card case-card">
+      <a href="/case-studies/customer-service-bot/" class="card case-card">
         <div class="case-card-image" style="background-image: url('https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&amp;q=80');">
           <span class="case-card-client">TechStart Inc</span>
         </div>
@@ -91,7 +91,7 @@
         </div>
       </a>
       
-      <a href="//localhost:1313/case-studies/sample-project/" class="card case-card">
+      <a href="/case-studies/sample-project/" class="card case-card">
         <div class="case-card-image" style="background-image: url('https://images.unsplash.com/photo-1568234928966-359c35dd8327?w=800&amp;q=80');">
           <span class="case-card-client">Acme Corp</span>
         </div>
@@ -112,7 +112,7 @@
         </div>
       </a>
       
-      <a href="//localhost:1313/case-studies/data-pipeline/" class="card case-card">
+      <a href="/case-studies/data-pipeline/" class="card case-card">
         <div class="case-card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&amp;q=80');">
           <span class="case-card-client">RetailMax</span>
         </div>
@@ -247,6 +247,28 @@
       document.querySelectorAll('[data-reveal], [data-reveal-stagger], .section-header').forEach(el => {
         observer.observe(el);
       });
+
+      
+      const articleContent = document.querySelector('.article-content');
+      if (articleContent) {
+        articleContent.classList.add('animated');
+
+        const contentElements = articleContent.querySelectorAll('h2, h3, p, ul, ol, blockquote');
+
+        const contentObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              contentObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        contentElements.forEach(el => contentObserver.observe(el));
+      }
 
       
       const countElements = document.querySelectorAll('[data-count-to]');

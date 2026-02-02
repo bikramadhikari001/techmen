@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ai | Techmen.ai</title>
@@ -71,13 +71,13 @@
     <div class="grid grid-3" data-reveal-stagger>
       
       <article class="card">
-        <h3><a href="//localhost:1313/blog/hello-world/" style="color: var(--text-primary);">Why Most AI Projects Fail (And How to Avoid It)</a></h3>
+        <h3><a href="/blog/hello-world/" style="color: var(--text-primary);">Why Most AI Projects Fail (And How to Avoid It)</a></h3>
         <p><p>Let&rsquo;s be honest: most AI projects fail. Studies consistently show that 70-80% of AI initiatives never make it to production. After working on …</p></p>
         <small style="color: var(--text-muted);">Feb 1, 2026</small>
       </article>
       
       <article class="card">
-        <h3><a href="//localhost:1313/blog/chatbots-done-right/" style="color: var(--text-primary);">Chatbots Done Right: A Practical Guide</a></h3>
+        <h3><a href="/blog/chatbots-done-right/" style="color: var(--text-primary);">Chatbots Done Right: A Practical Guide</a></h3>
         <p><p>Everyone&rsquo;s had a terrible chatbot experience. You know the one—you type a simple question and get a completely irrelevant response, then spend …</p></p>
         <small style="color: var(--text-muted);">Jan 25, 2026</small>
       </article>
@@ -195,6 +195,28 @@
       document.querySelectorAll('[data-reveal], [data-reveal-stagger], .section-header').forEach(el => {
         observer.observe(el);
       });
+
+      
+      const articleContent = document.querySelector('.article-content');
+      if (articleContent) {
+        articleContent.classList.add('animated');
+
+        const contentElements = articleContent.querySelectorAll('h2, h3, p, ul, ol, blockquote');
+
+        const contentObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              contentObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        contentElements.forEach(el => contentObserver.observe(el));
+      }
 
       
       const countElements = document.querySelectorAll('[data-count-to]');

@@ -2,74 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/tags/ai/</loc>
+    <loc>/tags/ai/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/best-practices/</loc>
+    <loc>/tags/best-practices/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/strategy/</loc>
+    <loc>/tags/strategy/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/hello-world/</loc>
+    <loc>/blog/hello-world/</loc>
     <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/chatbots/</loc>
+    <loc>/tags/chatbots/</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/chatbots-done-right/</loc>
+    <loc>/blog/chatbots-done-right/</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/customer-experience/</loc>
+    <loc>/tags/customer-experience/</loc>
     <lastmod>2026-01-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/case-studies/customer-service-bot/</loc>
+    <loc>/case-studies/customer-service-bot/</loc>
     <lastmod>2026-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/case-studies/</loc>
+    <loc>/case-studies/</loc>
     <lastmod>2026-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/case-studies/sample-project/</loc>
+    <loc>/case-studies/sample-project/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/engineering/</loc>
+    <loc>/tags/engineering/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/philosophy/</loc>
+    <loc>/tags/philosophy/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/simple-beats-smart/</loc>
+    <loc>/blog/simple-beats-smart/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/simplicity/</loc>
+    <loc>/tags/simplicity/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/case-studies/data-pipeline/</loc>
+    <loc>/case-studies/data-pipeline/</loc>
     <lastmod>2025-12-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>/about/</loc>
   </url><url>
-    <loc>//localhost:1313/services/ai-consulting/</loc>
+    <loc>/services/ai-consulting/</loc>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/services/chatbot-development/</loc>
+    <loc>/services/chatbot-development/</loc>
   </url><url>
-    <loc>//localhost:1313/services/cloud-services/</loc>
+    <loc>/services/cloud-services/</loc>
   </url><url>
-    <loc>//localhost:1313/contact/</loc>
+    <loc>/contact/</loc>
   </url><url>
-    <loc>//localhost:1313/services/digital-transformation/</loc>
+    <loc>/services/digital-transformation/</loc>
   </url><url>
-    <loc>//localhost:1313/services/</loc>
+    <loc>/services/</loc>
   </url>
 </urlset>

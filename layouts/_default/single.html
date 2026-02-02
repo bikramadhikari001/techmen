@@ -18,14 +18,18 @@
 
 <article class="article">
   <div class="container">
+    <!-- Summary Card for Case Studies -->
     {{ if eq .Section "case-studies" }}
     {{ with .Params.results }}
-    <div class="results-box" data-reveal>
-      <h3>Key Results</h3>
-      <div class="results-grid">
+    <div class="summary-card" data-reveal>
+      <div class="summary-card-header">
+        <span class="summary-icon">📊</span>
+        <h3>Project Impact</h3>
+      </div>
+      <div class="summary-stats">
         {{ range . }}
-        <div class="result-item">
-          <span class="result-icon">✓</span>
+        <div class="summary-stat">
+          <span class="stat-check">✓</span>
           <span>{{ . }}</span>
         </div>
         {{ end }}
@@ -34,18 +38,22 @@
     {{ end }}
     {{ end }}
 
+    <!-- Summary Card for Services -->
     {{ if eq .Section "services" }}
     {{ with .Params.features }}
-    <div class="features-box" data-reveal>
-      <h3>What's Included</h3>
-      <ul class="features-grid">
+    <div class="summary-card summary-card-services" data-reveal>
+      <div class="summary-card-header">
+        <span class="summary-icon">{{ partial "icon.html" ($.Params.icon | default "brain") }}</span>
+        <h3>What's Included</h3>
+      </div>
+      <div class="summary-features">
         {{ range . }}
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>{{ . }}</span>
-        </li>
+        </div>
         {{ end }}
-      </ul>
+      </div>
     </div>
     {{ end }}
     {{ end }}

@@ -155,6 +155,28 @@
         observer.observe(el);
       });
 
+      // Article content animations
+      const articleContent = document.querySelector('.article-content');
+      if (articleContent) {
+        articleContent.classList.add('animated');
+
+        const contentElements = articleContent.querySelectorAll('h2, h3, p, ul, ol, blockquote');
+
+        const contentObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              contentObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        contentElements.forEach(el => contentObserver.observe(el));
+      }
+
       // Count-up animation for stats
       const countElements = document.querySelectorAll('[data-count-to]');
       if (countElements.length > 0) {

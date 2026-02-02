@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI-Powered Document Processing | Techmen.ai</title>
@@ -76,27 +76,31 @@
   <div class="container">
     
     
-    <div class="results-box" data-reveal>
-      <h3>Key Results</h3>
-      <div class="results-grid">
+    
+    <div class="summary-card" data-reveal>
+      <div class="summary-card-header">
+        <span class="summary-icon">📊</span>
+        <h3>Project Impact</h3>
+      </div>
+      <div class="summary-stats">
         
-        <div class="result-item">
-          <span class="result-icon">✓</span>
+        <div class="summary-stat">
+          <span class="stat-check">✓</span>
           <span>50% reduction in manual work</span>
         </div>
         
-        <div class="result-item">
-          <span class="result-icon">✓</span>
+        <div class="summary-stat">
+          <span class="stat-check">✓</span>
           <span>3x faster processing</span>
         </div>
         
-        <div class="result-item">
-          <span class="result-icon">✓</span>
+        <div class="summary-stat">
+          <span class="stat-check">✓</span>
           <span>99.9% accuracy</span>
         </div>
         
-        <div class="result-item">
-          <span class="result-icon">✓</span>
+        <div class="summary-stat">
+          <span class="stat-check">✓</span>
           <span>$200K annual savings</span>
         </div>
         
@@ -105,6 +109,7 @@
     
     
 
+    
     
 
     <div class="article-content" data-reveal>
@@ -250,6 +255,28 @@
       document.querySelectorAll('[data-reveal], [data-reveal-stagger], .section-header').forEach(el => {
         observer.observe(el);
       });
+
+      
+      const articleContent = document.querySelector('.article-content');
+      if (articleContent) {
+        articleContent.classList.add('animated');
+
+        const contentElements = articleContent.querySelectorAll('h2, h3, p, ul, ol, blockquote');
+
+        const contentObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              contentObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        contentElements.forEach(el => contentObserver.observe(el));
+      }
 
       
       const countElements = document.querySelectorAll('[data-count-to]');

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Consulting | Techmen.ai</title>
@@ -69,44 +69,59 @@
 <article class="article">
   <div class="container">
     
+    
 
     
     
-    <div class="features-box" data-reveal>
-      <h3>What's Included</h3>
-      <ul class="features-grid">
+    
+    <div class="summary-card summary-card-services" data-reveal>
+      <div class="summary-card-header">
+        <span class="summary-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4.5a2.5 2.5 0 0 0-4.96-.46 2.5 2.5 0 0 0-1.98 3 2.5 2.5 0 0 0-1.32 4.24 3 3 0 0 0 .34 5.58 2.5 2.5 0 0 0 2.96 3.08A2.5 2.5 0 0 0 12 19.5a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 12 4.5"/>
+  <path d="m15.7 10.4-.9.4"/>
+  <path d="m9.2 13.2-.9.4"/>
+  <path d="m13.6 15.7-.4-.9"/>
+  <path d="m10.8 9.2-.4-.9"/>
+  <path d="m15.7 13.5-.9-.4"/>
+  <path d="m9.2 10.9-.9-.4"/>
+  <path d="m10.4 15.7.4-.9"/>
+  <path d="m13.1 9.2.4-.9"/>
+</svg></span>
+        <h3>What's Included</h3>
+      </div>
+      <div class="summary-features">
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>AI Strategy Development</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Technology Assessment</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Implementation Roadmap</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Team Training &amp; Workshops</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>Vendor Selection Support</span>
-        </li>
+        </div>
         
-        <li class="feature-item">
-          <span class="feature-icon">✓</span>
+        <div class="summary-feature">
+          <span class="feature-dot"></span>
           <span>ROI Analysis</span>
-        </li>
+        </div>
         
-      </ul>
+      </div>
     </div>
     
     
@@ -247,6 +262,28 @@
       document.querySelectorAll('[data-reveal], [data-reveal-stagger], .section-header').forEach(el => {
         observer.observe(el);
       });
+
+      
+      const articleContent = document.querySelector('.article-content');
+      if (articleContent) {
+        articleContent.classList.add('animated');
+
+        const contentElements = articleContent.querySelectorAll('h2, h3, p, ul, ol, blockquote');
+
+        const contentObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              contentObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        });
+
+        contentElements.forEach(el => contentObserver.observe(el));
+      }
 
       
       const countElements = document.querySelectorAll('[data-count-to]');
