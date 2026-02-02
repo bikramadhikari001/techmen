@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Philosophy on Techmen.ai</title>
-    <link>/tags/philosophy/</link>
+    <link>//localhost:1313/tags/philosophy/</link>
     <description>Recent content in Philosophy on Techmen.ai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/philosophy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple Beats Smart: Our Philosophy on Technology</title>
-      <link>/blog/simple-beats-smart/</link>
+      <link>//localhost:1313/blog/simple-beats-smart/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/blog/simple-beats-smart/</guid>
+      <guid>//localhost:1313/blog/simple-beats-smart/</guid>
       <description>&lt;p&gt;In tech, there&amp;rsquo;s constant pressure to use the newest, most sophisticated solutions. But after years of building systems, we&amp;rsquo;ve learned a counterintuitive truth: &lt;strong&gt;simple beats smart, almost every time.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-complexity-trap&#34;&gt;The Complexity Trap&lt;/h2&gt;&#xA;&lt;p&gt;It&amp;rsquo;s tempting to reach for complex solutions. They&amp;rsquo;re intellectually satisfying. They look impressive in architecture diagrams. They give engineers interesting problems to solve.&lt;/p&gt;&#xA;&lt;p&gt;But complexity has costs:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;More things that can break&lt;/li&gt;&#xA;&lt;li&gt;Harder to debug when things go wrong&lt;/li&gt;&#xA;&lt;li&gt;Steeper learning curve for new team members&lt;/li&gt;&#xA;&lt;li&gt;Higher maintenance burden over time&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;real-examples&#34;&gt;Real Examples&lt;/h2&gt;&#xA;&lt;h3 id=&#34;the-over-engineered-recommendation-system&#34;&gt;The Over-Engineered Recommendation System&lt;/h3&gt;&#xA;&lt;p&gt;A client wanted product recommendations. The &amp;ldquo;smart&amp;rdquo; approach: build a sophisticated machine learning pipeline with real-time feature engineering, A/B testing infrastructure, and multiple model ensembles.&lt;/p&gt;</description>
     </item>
   </channel>

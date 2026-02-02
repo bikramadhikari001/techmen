@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Techmen.ai</title>
-    <link>/blog/</link>
+    <link>//localhost:1313/blog/</link>
     <description>Recent content in Blog on Techmen.ai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why Most AI Projects Fail (And How to Avoid It)</title>
-      <link>/blog/hello-world/</link>
+      <link>//localhost:1313/blog/hello-world/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/blog/hello-world/</guid>
+      <guid>//localhost:1313/blog/hello-world/</guid>
       <description>&lt;p&gt;Let&amp;rsquo;s be honest: most AI projects fail. Studies consistently show that 70-80% of AI initiatives never make it to production. After working on dozens of AI projects, we&amp;rsquo;ve seen the patterns that separate success from failure.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-three-killers-of-ai-projects&#34;&gt;The Three Killers of AI Projects&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-starting-with-technology-not-problems&#34;&gt;1. Starting With Technology, Not Problems&lt;/h3&gt;&#xA;&lt;p&gt;The most common mistake? Companies decide they &amp;ldquo;need AI&amp;rdquo; before identifying what problem they&amp;rsquo;re solving. They buy expensive tools, hire data scientists, and then go looking for use cases.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chatbots Done Right: A Practical Guide</title>
-      <link>/blog/chatbots-done-right/</link>
+      <link>//localhost:1313/blog/chatbots-done-right/</link>
       <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/blog/chatbots-done-right/</guid>
+      <guid>//localhost:1313/blog/chatbots-done-right/</guid>
       <description>&lt;p&gt;Everyone&amp;rsquo;s had a terrible chatbot experience. You know the one—you type a simple question and get a completely irrelevant response, then spend 10 minutes trying to reach a human.&lt;/p&gt;&#xA;&lt;p&gt;But it doesn&amp;rsquo;t have to be this way. Here&amp;rsquo;s how to build chatbots that actually work.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-golden-rule-know-your-limits&#34;&gt;The Golden Rule: Know Your Limits&lt;/h2&gt;&#xA;&lt;p&gt;The best chatbots know what they don&amp;rsquo;t know. Instead of confidently giving wrong answers, they gracefully hand off to humans when they&amp;rsquo;re uncertain.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Simple Beats Smart: Our Philosophy on Technology</title>
-      <link>/blog/simple-beats-smart/</link>
+      <link>//localhost:1313/blog/simple-beats-smart/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/blog/simple-beats-smart/</guid>
+      <guid>//localhost:1313/blog/simple-beats-smart/</guid>
       <description>&lt;p&gt;In tech, there&amp;rsquo;s constant pressure to use the newest, most sophisticated solutions. But after years of building systems, we&amp;rsquo;ve learned a counterintuitive truth: &lt;strong&gt;simple beats smart, almost every time.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-complexity-trap&#34;&gt;The Complexity Trap&lt;/h2&gt;&#xA;&lt;p&gt;It&amp;rsquo;s tempting to reach for complex solutions. They&amp;rsquo;re intellectually satisfying. They look impressive in architecture diagrams. They give engineers interesting problems to solve.&lt;/p&gt;&#xA;&lt;p&gt;But complexity has costs:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;More things that can break&lt;/li&gt;&#xA;&lt;li&gt;Harder to debug when things go wrong&lt;/li&gt;&#xA;&lt;li&gt;Steeper learning curve for new team members&lt;/li&gt;&#xA;&lt;li&gt;Higher maintenance burden over time&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;real-examples&#34;&gt;Real Examples&lt;/h2&gt;&#xA;&lt;h3 id=&#34;the-over-engineered-recommendation-system&#34;&gt;The Over-Engineered Recommendation System&lt;/h3&gt;&#xA;&lt;p&gt;A client wanted product recommendations. The &amp;ldquo;smart&amp;rdquo; approach: build a sophisticated machine learning pipeline with real-time feature engineering, A/B testing infrastructure, and multiple model ensembles.&lt;/p&gt;</description>
     </item>
   </channel>

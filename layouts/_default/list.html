@@ -1,21 +1,23 @@
 {{ define "main" }}
 <!-- Page Header -->
-<section class="about-hero" style="padding-top: 120px;">
+<section class="page-hero" style="padding-top: 120px;">
   <div class="container">
     <h1>{{ .Title }}</h1>
-    {{ with .Content }}<div style="max-width: 700px; margin: 0 auto;">{{ . }}</div>{{ end }}
+    {{ with .Content }}<p>{{ . | plainify | truncate 200 }}</p>{{ end }}
   </div>
 </section>
 
 <!-- Content Grid -->
-<section class="section">
+<section class="section section-alt">
   <div class="container">
     {{ if eq .Section "blog" }}
     <!-- Blog Layout -->
-    <div class="grid grid-3">
+    <div class="grid grid-3" data-reveal-stagger>
       {{ range .Pages }}
       <article class="card blog-card">
-        <div class="blog-card-image">📝</div>
+        <div class="blog-card-image">
+          <span class="blog-icon">📝</span>
+        </div>
         <div class="blog-card-content">
           <div class="blog-card-meta">{{ .Date.Format "Jan 2, 2006" }}</div>
           <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
@@ -27,7 +29,7 @@
 
     {{ else if eq .Section "case-studies" }}
     <!-- Case Studies Layout -->
-    <div class="grid grid-2">
+    <div class="grid grid-2" data-reveal-stagger>
       {{ range .Pages }}
       <a href="{{ .Permalink }}" class="card case-card">
         <div class="case-card-image" {{ with .Params.image }}style="background-image: url('{{ . }}');"{{ end }}>
@@ -50,26 +52,30 @@
 
     {{ else if eq .Section "services" }}
     <!-- Services Layout -->
-    <div class="grid grid-4">
+    <div class="grid grid-2 grid-services" data-reveal-stagger>
       {{ range .Pages }}
-      <a href="{{ .Permalink }}" class="card service-card">
-        <div class="service-icon">{{ partial "icon.html" (.Params.icon | default "brain") }}</div>
-        <h3>{{ .Title }}</h3>
-        <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}</p>
-        {{ with .Params.features }}
-        <ul class="service-features">
-          {{ range first 3 . }}
-          <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-        {{ end }}
+      <a href="{{ .Permalink }}" class="card service-card-large">
+        <div class="service-card-inner">
+          <div class="service-icon-large">{{ partial "icon.html" (.Params.icon | default "brain") }}</div>
+          <div class="service-card-text">
+            <h3>{{ .Title }}</h3>
+            <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | truncate 150 }}{{ end }}</p>
+            {{ with .Params.features }}
+            <ul class="service-features">
+              {{ range first 4 . }}
+              <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </div>
+        </div>
       </a>
       {{ end }}
     </div>
 
     {{ else }}
     <!-- Default Layout -->
-    <div class="grid grid-3">
+    <div class="grid grid-3" data-reveal-stagger>
       {{ range .Pages }}
       <article class="card">
         <h3><a href="{{ .Permalink }}" style="color: var(--text-primary);">{{ .Title }}</a></h3>
@@ -84,7 +90,7 @@
 
 <!-- CTA -->
 <section class="section cta">
-  <div class="container">
+  <div class="container" data-reveal>
     <h2>Ready to Get Started?</h2>
     <p>Let's discuss how we can help your business.</p>
     <a href="/contact/" class="btn btn-primary btn-lg">Contact Us</a>

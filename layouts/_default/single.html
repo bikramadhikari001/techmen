@@ -1,58 +1,63 @@
 {{ define "main" }}
-<article class="article" style="padding-top: 120px;">
-  <header class="article-header">
-    {{ if .Date }}<div class="article-meta">{{ .Date.Format "January 2, 2006" }}</div>{{ end }}
-    <h1 class="article-title">{{ .Title }}</h1>
-    {{ with .Params.description }}<p style="font-size: var(--text-xl); color: var(--text-secondary);">{{ . }}</p>{{ end }}
+<!-- Page Hero -->
+<section class="page-hero" style="padding-top: 120px;">
+  <div class="container">
+    {{ if .Date }}<div class="article-meta" style="color: rgba(255,255,255,0.7);">{{ .Date.Format "January 2, 2006" }}</div>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
 
     {{ if eq .Section "case-studies" }}
     {{ with .Params.client }}
     <div style="margin-top: var(--space-4);">
-      <span style="background: var(--purple); color: white; padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-size: var(--text-sm);">Client: {{ . }}</span>
+      <span style="background: var(--orange); color: var(--purple-dark); padding: var(--space-2) var(--space-4); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600;">Client: {{ . }}</span>
     </div>
     {{ end }}
     {{ end }}
-  </header>
+  </div>
+</section>
 
-  {{ if eq .Section "case-studies" }}
-  {{ with .Params.results }}
-  <div style="background: var(--gray-50); padding: var(--space-8); border-radius: var(--radius-xl); margin-bottom: var(--space-12);">
-    <h3 style="margin-bottom: var(--space-4); font-size: var(--text-lg);">Key Results</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
-      {{ range . }}
-      <div style="display: flex; align-items: center; gap: var(--space-2);">
-        <span style="color: var(--orange); font-weight: 600;">✓</span>
-        <span>{{ . }}</span>
+<article class="article">
+  <div class="container">
+    {{ if eq .Section "case-studies" }}
+    {{ with .Params.results }}
+    <div class="results-box" data-reveal>
+      <h3>Key Results</h3>
+      <div class="results-grid">
+        {{ range . }}
+        <div class="result-item">
+          <span class="result-icon">✓</span>
+          <span>{{ . }}</span>
+        </div>
+        {{ end }}
       </div>
-      {{ end }}
     </div>
-  </div>
-  {{ end }}
-  {{ end }}
+    {{ end }}
+    {{ end }}
 
-  {{ if eq .Section "services" }}
-  {{ with .Params.features }}
-  <div style="background: var(--gray-50); padding: var(--space-8); border-radius: var(--radius-xl); margin-bottom: var(--space-12);">
-    <h3 style="margin-bottom: var(--space-4); font-size: var(--text-lg);">What's Included</h3>
-    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-3);">
-      {{ range . }}
-      <li style="display: flex; align-items: center; gap: var(--space-2);">
-        <span style="color: var(--orange); font-weight: 600;">✓</span>
-        <span>{{ . }}</span>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  {{ end }}
-  {{ end }}
+    {{ if eq .Section "services" }}
+    {{ with .Params.features }}
+    <div class="features-box" data-reveal>
+      <h3>What's Included</h3>
+      <ul class="features-grid">
+        {{ range . }}
+        <li class="feature-item">
+          <span class="feature-icon">✓</span>
+          <span>{{ . }}</span>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+    {{ end }}
 
-  <div class="article-content">
-    {{ .Content }}
-  </div>
+    <div class="article-content" data-reveal>
+      {{ .Content }}
+    </div>
 
-  <!-- Back Link -->
-  <div style="margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--gray-200);">
-    <a href="/{{ .Section }}/" style="color: var(--orange); font-weight: 500;">← Back to {{ .Section | title }}</a>
+    <!-- Back Link -->
+    <div class="back-link">
+      <a href="/{{ .Section }}/">← Back to {{ .Section | title }}</a>
+    </div>
   </div>
 </article>
 

@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Techmen.ai</title>
-    <link>/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on Techmen.ai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
-      <link>/tags/ai/</link>
+      <link>//localhost:1313/tags/ai/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/ai/</guid>
+      <guid>//localhost:1313/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Best-Practices</title>
-      <link>/tags/best-practices/</link>
+      <link>//localhost:1313/tags/best-practices/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/best-practices/</guid>
+      <guid>//localhost:1313/tags/best-practices/</guid>
       <description></description>
     </item>
     <item>
       <title>Strategy</title>
-      <link>/tags/strategy/</link>
+      <link>//localhost:1313/tags/strategy/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/strategy/</guid>
+      <guid>//localhost:1313/tags/strategy/</guid>
       <description></description>
     </item>
     <item>
       <title>Chatbots</title>
-      <link>/tags/chatbots/</link>
+      <link>//localhost:1313/tags/chatbots/</link>
       <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/chatbots/</guid>
+      <guid>//localhost:1313/tags/chatbots/</guid>
       <description></description>
     </item>
     <item>
       <title>Customer-Experience</title>
-      <link>/tags/customer-experience/</link>
+      <link>//localhost:1313/tags/customer-experience/</link>
       <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/customer-experience/</guid>
+      <guid>//localhost:1313/tags/customer-experience/</guid>
       <description></description>
     </item>
     <item>
       <title>Engineering</title>
-      <link>/tags/engineering/</link>
+      <link>//localhost:1313/tags/engineering/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/engineering/</guid>
+      <guid>//localhost:1313/tags/engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Philosophy</title>
-      <link>/tags/philosophy/</link>
+      <link>//localhost:1313/tags/philosophy/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/philosophy/</guid>
+      <guid>//localhost:1313/tags/philosophy/</guid>
       <description></description>
     </item>
     <item>
       <title>Simplicity</title>
-      <link>/tags/simplicity/</link>
+      <link>//localhost:1313/tags/simplicity/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>/tags/simplicity/</guid>
+      <guid>//localhost:1313/tags/simplicity/</guid>
       <description></description>
     </item>
   </channel>
